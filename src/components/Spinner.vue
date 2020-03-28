@@ -41,7 +41,7 @@ $duration: 1.4s;
   stroke-dasharray: $offset;
   stroke-dashoffset: 0;
   transform-origin: center;
-  stroke: #4a8bfa;
+  stroke: #bbb;
   animation:
     dash $duration ease-in-out infinite;
 }

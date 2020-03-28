@@ -13,13 +13,13 @@ Vue.use(VueHead)
 Vue.use(VueFilters)
 Vue.use(VueInfiniteScroll)
 Vue.use(VueProgressBar, {
-  color: 'rgb(74, 139, 250)',
-  failedColor: 'rgb(205, 33, 13)',
-  height: '3px'
+    color: 'rgb(74, 139, 250)',
+    failedColor: 'rgb(205, 33, 13)',
+    height: '3px'
 })
 
 new Vue({
-  el: '#app',
-  router,
-  render: h => h(App)
+    el: '#app',
+    router,
+    render: h => h(App)
 })

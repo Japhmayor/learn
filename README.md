@@ -57,3 +57,4 @@ site: http://nodejs.org # official site (optional)
 ## License
 
 [MIT](https://github.com/freearhey/web-learn/blob/master/LICENSE)
+process.env.YOUTUBE_API_KEY can be replaced on weblearn.config.js as a value of apikey
