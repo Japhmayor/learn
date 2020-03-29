@@ -1,6 +1,6 @@
 {
     "name": "web-learn",
-    "description": "Web Learn is an open source service which provides simple access to thousands of video lessons on web developing and programming.",
+    "description": "Meyo is an open source service which provides simple access to thousands of video lessons on web developing and programming.",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/japhmayor/learn.git"
