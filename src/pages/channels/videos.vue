@@ -1,8 +1,11 @@
-<template lang="pug">
-section.section(v-infinite-scroll="loadMore",:infinite-scroll-disabled="!loaded")
-  .container
-    video-list(:videos="videos")
-    spinner(:show="!loaded")
+<template lang="">
+
+<section class="section" v-infinite-scroll="loadMore" :infinite-scroll-disabled="!loaded">
+  <div class="container">
+    <video-list :videos="videos"></video-list>
+    <spinner :show="!loaded"></spinner>
+  </div>
+</section>
 </template>
 
 <script>

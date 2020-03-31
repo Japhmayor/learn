@@ -1,29 +1,37 @@
-<template lang="pug">
-main
-  section(v-if="channel")
-    .hero.is-medium(:style="channelStyle")
-      .hero-body
-    .info
-      .container
-        .media
-          .media-left
-            .image.logo
-              span.logo__wrapper
-              img(:src="channel.thumbnails.medium.url",:alt="channel.title + ' channel logo'")
-          .media-content
-            .content
-              .title.is-3.channel-title
-                strong {{ channel.title }}
-                = ' '
-                a.ext-link(:href="channelLink",target="_blank",rel="noopener noreferrer")
-                  span.icon
-                    ion-icon(name="link")
-    nav.nav.has-underline
-      .container
-        .nav-center
-          router-link.nav-item.is-tab(:to="{ name: 'channel-about' }") About
-          router-link.nav-item.is-tab(:to="{ name: 'channel-recent-videos' }") Uploads
-    router-view
+<template lang="">
+
+<main>
+  <section v-if="channel">
+    <div class="hero is-medium" :style="channelStyle">
+      <div class="hero-body"></div>
+    </div>
+    <div class="info">
+      <div class="container">
+        <div class="media">
+          <div class="media-left">
+            <div class="image logo"><span class="logo__wrapper"></span><img :src="channel.thumbnails.medium.url" :alt="channel.title + ' channel logo'"></div>
+          </div>
+          <div class="media-content">
+            <div class="content">
+              <div class="title is-3 channel-title"><strong>{{ channel.title }}</strong> <a class="ext-link" :href="channelLink" target="_blank" rel="noopener noreferrer"><span class="icon">
+                    <ion-icon name="link"></ion-icon></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="nav has-underline">
+      <div class="container">
+        <div class="nav-center">
+          <router-link class="nav-item is-tab" :to="{ name: 'channel-about' }">About</router-link>
+          <router-link class="nav-item is-tab" :to="{ name: 'channel-recent-videos' }">Uploads</router-link>
+        </div>
+      </div>
+    </nav>
+    <router-view></router-view>
+  </section>
+</main>
 </template>
 
 <script>

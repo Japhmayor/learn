@@ -1,12 +1,11 @@
-<template lang="pug">
-.control
-  span.select
-    select(v-model="selected",:class="{ 'is-disabled': disabled }",:aria-label="ariaLabel")
-      option(v-if="placeholder",value="") {{ placeholder }}
-      option(
-        v-for="option in options",
-        :value="option.value"
-      ) {{ option.title }}
+<template lang="">
+
+<div class="control"><span class="select">
+    <select v-model="selected" :class="{ 'is-disabled': disabled }" :aria-label="ariaLabel">
+      <option v-if="placeholder" value="">{{ placeholder }}</option>
+      <option v-for="option in options" :value="option.value">{{ option.title }}</option>
+    </select></span>
+</div>
 </template>
 
 <script>

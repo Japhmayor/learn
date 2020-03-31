@@ -1,11 +1,15 @@
-<template lang="pug">
-transition(
-    mode="out-in",
-    :enter-active-class="enterClass",
-    leave-active-class="fadeOut"
-  )
-  .Alert.animated(v-if="show",@click="show = false",:class="classObject")
-    span {{ message }}
+<template lang="">
+<transition mode="out-in"
+      :enter-active-class="enterClass" 
+      leave-active-class="fadeOut">
+    <div class="Alert animated" 
+      v-if="show" 
+      @click="show = false" 
+      :class="classObject">
+    <span>{{ message }}</span>
+  </div>
+</transition>
+
 </template>
 
 <script>

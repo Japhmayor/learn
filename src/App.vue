@@ -1,12 +1,15 @@
-<template lang="pug">
-  div#app
-    v-header
-    v-nav
-    router-view
-    vue-progress-bar
-    div(v-if="errors.length")
-      alert(v-for="error, i in errors",:key="i",type="info",:message="error",position="bottom-right",autohide) 
-    v-footer
+<template lang="">
+  
+<div id="app">
+  <v-header></v-header>
+  <v-nav></v-nav>
+  <router-view></router-view>
+  <vue-progress-bar></vue-progress-bar>
+  <div v-if="errors.length">
+    <alert v-for="error, i in errors" :key="i" type="info" :message="error" position="bottom-right" autohide> </alert>
+  </div>
+  <v-footer></v-footer>
+</div>
 </template>
 
 <script>

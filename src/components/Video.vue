@@ -1,15 +1,25 @@
-<template lang="pug">
-.video
-  router-link.card-image(:to="{ name: 'video', params: { id: video.id } }")
-    figure.image.is-16by9
-      img(:src="video.thumbnails.medium.url",:alt="video.title")
-      .video__duration {{ duration }}
-  .video__body
-    .media
-      .media-content
-        p: router-link.title.is-6(:to="{ name: 'video', params: { id: video.id } }") #[strong {{ video.title }}]
-        p: router-link.subtitle.is-6(:to="{ name: 'channel', params: { id: video.channelId } }") {{ video.channelTitle }}
-        p.subtitle.is-6 {{ viewCount }} * {{ publishedAt }}
+<template lang="">
+
+<div class="video">
+  <router-link class="card-image" :to="{ name: 'video', params: { id: video.id } }">
+    <figure class="image is-16by9"><img :src="video.thumbnails.medium.url" :alt="video.title">
+      <div class="video__duration">{{ duration }}</div>
+    </figure>
+  </router-link>
+  <div class="video__body">
+    <div class="media">
+      <div class="media-content">
+        <p>
+          <router-link class="title is-6" :to="{ name: 'video', params: { id: video.id } }"><strong>{{ video.title }}</strong></router-link>
+        </p>
+        <p>
+          <router-link class="subtitle is-6" :to="{ name: 'channel', params: { id: video.channelId } }">{{ video.channelTitle }}</router-link>
+        </p>
+        <p class="subtitle is-6">{{ viewCount }} <b>published</b> {{ publishedAt }}</p>
+      </div>
+    </div>
+  </div>
+</div>
 </template>
 
 <script>

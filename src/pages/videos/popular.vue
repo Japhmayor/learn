@@ -1,9 +1,13 @@
-<template lang="pug">
-section.section
-  .container
-    h2.title.is-5 #[strong Trending]
-    video-list(:videos="videos")
+<template lang="">
+<section class="section">
+<div class="container">
+  <h2 class="title is-5">
+  <strong>Trending</strong></h2>
+  <video-list :videos="videos"></video-list>
+</div>
+</section>
 </template>
+
 
 <script>
 import store from '~store'

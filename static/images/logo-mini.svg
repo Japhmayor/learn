@@ -1,15 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="35px" viewBox="0 0 24 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 2</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop-HD-Copy" transform="translate(-837.000000, -439.000000)">
-            <g id="Group-2" transform="translate(837.000000, 439.000000)">
-                <path d="M6,13.4093701 L6,33.5906299 C6,34.7288623 7.26423056,35.3959588 8.18431122,34.7432254 L22.4078721,24.6525955 C23.197376,24.0924973 23.197376,22.9075027 22.4078721,22.3474045 L8.18431122,12.2567746 C7.26423056,11.6040412 6,12.2711377 6,13.4093701 Z" id="Path-4" fill="#4A8BFA" opacity="0.293195199"></path>
-                <path d="M0.0479999542,2 L0.0479999542,30 C0.0479999542,31.579213 1.82565686,32.5047599 3.11939852,31.5991407 L23.1193985,17.5991407 C24.2295339,16.822046 24.2295339,15.177954 23.1193985,14.4008593 L3.11939852,0.400859254 C1.82565686,-0.504759909 0.0479999542,0.420787046 0.0479999542,2 Z" id="Path-4" fill="#5192FF"></path>
-            </g>
-        </g>
-    </g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="35px" viewBox="0 0 24 35" enable-background="new 0 0 24 35" xml:space="preserve">  <image id="image0" width="24" height="35" x="0" y="0"
+    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAjCAAAAACroZVKAAAAAXNSR0IArs4c6QAAAAJiS0dEAP+H
+j8y/AAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH5AMfAhkrOuNKGwAAAZpJREFUKM+Vkrtr
+lEEUxX9ndjbixiQsGGXB12LYhGw2YhYStBJB1pA0gkWw0spGJVb6ZyhYaGNjJdhrG6KFnZWNdkII
+WFiYQECcY/E9dj9N461m7plzH2eOTBYWlQjFIc97FHCWcYUnFxdTKaakwzpAELzprX34/TdAsheh
+9eSHk0cDO50G2PjkCoSd5gDovTqwbacMx/ZcNk/z8U6O2DbJ7ubrxfWPo6WSu+Uksy9TQcL2gsrd
+Ju/tFKVsL41MX7u6nXXHTn0CQz1OPd8vGH3xdje9/7nbAaB+96vtAETD1v0L/b1rAPr14s47HIAa
+4tvnvS/7uf5sP0QBbBkslxI3ViFiRSOCVfze+Ue3LGxfqeq99Oy77WBcG34bTN283djCRKHSEFgz
+N2aDDywiMGSMX77exK1FWRGIRf7cYAXGOt0GFcaR5UFLabp3VlhEnJvu5GDlKLVOd1IgiIV8/dW2
+3Jxv1/MtI3IdzjwYm7DbC9OlyYLRDPNPN495fPnS8SxvQM6t+Xrq4gllr1PIvHuoQymV+8e7/C/w
+B5o25kGpO9qqAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIwLTAzLTMxVDAyOjI1OjQzKzAzOjAwKzZW
+CQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMC0wMy0zMVQwMjoyNTo0MyswMzowMFpr7rUAAAARdEVY
+dGV4aWY6Q29sb3JTcGFjZQAxD5sCSQAAACF0RVh0ZXhpZjpEYXRlVGltZQAyMDIwOjAzOjMxIDAw
+OjExOjA01FBJJQAAABd0RVh0ZXhpZjpFeGlmSW1hZ2VMZW5ndGgAMzX6lpoPAAAAFnRFWHRleGlm
+OkV4aWZJbWFnZVdpZHRoADI02XgmXQAAABN0RVh0ZXhpZjpFeGlmT2Zmc2V0ADE2NMx7KxQAAAAr
+dEVYdGV4aWY6U29mdHdhcmUAQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cynnqcc7AAAAHHRF
+WHRleGlmOnRodW1ibmFpbDpDb21wcmVzc2lvbgA2+WVwVwAAACh0RVh0ZXhpZjp0aHVtYm5haWw6
+SlBFR0ludGVyY2hhbmdlRm9ybWF0ADMwMkUkal0AAAAudEVYdGV4aWY6dGh1bWJuYWlsOkpQRUdJ
+bnRlcmNoYW5nZUZvcm1hdExlbmd0aAA4NjiNSbSKAAAAH3RFWHRleGlmOnRodW1ibmFpbDpSZXNv
+bHV0aW9uVW5pdAAyJUBe0wAAAB90RVh0ZXhpZjp0aHVtYm5haWw6WFJlc29sdXRpb24ANzIvMdqH
+GCwAAAAfdEVYdGV4aWY6dGh1bWJuYWlsOllSZXNvbHV0aW9uADcyLzF074m9AAAAOHRFWHRpY2M6
+Y29weXJpZ2h0AENvcHlyaWdodCAoYykgMTk5OCBIZXdsZXR0LVBhY2thcmQgQ29tcGFueflXeTcA
+AAAhdEVYdGljYzpkZXNjcmlwdGlvbgBzUkdCIElFQzYxOTY2LTIuMVet2kcAAAAmdEVYdGljYzpt
+YW51ZmFjdHVyZXIASUVDIGh0dHA6Ly93d3cuaWVjLmNoHH8ATAAAADd0RVh0aWNjOm1vZGVsAElF
+QyA2MTk2Ni0yLjEgRGVmYXVsdCBSR0IgY29sb3VyIHNwYWNlIC0gc1JHQkRTSKkAAAAASUVORK5C
+YII=" />
 </svg>

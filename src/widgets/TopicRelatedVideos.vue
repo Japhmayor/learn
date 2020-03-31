@@ -1,10 +1,14 @@
-<template lang="pug">
-section.section.is-paddingless(v-if="topic && videos.length")
-  hr
-  .container
-    strong More from #[router-link(:to="{ name: 'topic', params: { id: topic.id } }") {{ topic.title }}]
-    .has-margintop
-      video-list(:videos="videos",:columns="limit")
+<template lang="">
+
+<section class="section is-paddingless" v-if="topic &amp;&amp; videos.length">
+  <hr>
+  <div class="container"><strong>More from 
+      <router-link :to="{ name: 'topic', params: { id: topic.id } }">{{ topic.title }}</router-link></strong>
+    <div class="has-margintop">
+      <video-list :videos="videos" :columns="limit"></video-list>
+    </div>
+  </div>
+</section>
 </template>
 
 <script>

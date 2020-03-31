@@ -1,39 +1,30 @@
-<template lang="pug">
-  main
-    section.section(v-infinite-scroll="loadMore",infinite-scroll-disabled="loading")
-      .container
-        .level
-          .level-left
-            h2.title.is-4 Search for #[strong {{ query }}]
-          .level-right
-            .control.is-grouped
-              v-select(
-                @option-selected="changeOrder",
-                :options="orderOptions",
-                :default="order",
-                aria-label="order"
-              )
-              v-select(
-                @option-selected="changeTimeframe",
-                :options="timeframeOptions",
-                :default="timeframe",
-                aria-label="timeframe"
-              )
-              .tooltip
-                v-select(
-                  @option-selected="changeLanguage",
-                  :options="languageOptions",
-                  disabled,
-                  placeholder="Language",
-                  aria-label="language"
-                )
-                span.tooltip-text Not work only because YouTube API #[a(href="https://code.google.com/p/gdata-issues/issues/detail?id=4110&q=relevanceLanguage&colspec=API%20ID%20Type%20Status%20Priority%20Stars%20Summary",target="_blank",rel="noopener") issue]
-        video-list(:videos="results")
-        spinner(:show="loading")
-        .no-results(v-show="noResults") 
-          router-link(to="/") 
-            img(:src="logo",:alt="appName + ' logo'")
-          span No results.
+<template lang="">
+  
+<main>
+  <section class="section" v-infinite-scroll="loadMore" infinite-scroll-disabled="loading">
+    <div class="container">
+      <div class="level">
+        <div class="level-left">
+          <h2 class="title is-4">Search for <strong>{{ query }}</strong></h2>
+        </div>
+        <div class="level-right">
+          <div class="control is-grouped">
+            <v-select @option-selected="changeOrder" :options="orderOptions" :default="order" aria-label="order"></v-select>
+            <v-select @option-selected="changeTimeframe" :options="timeframeOptions" :default="timeframe" aria-label="timeframe"></v-select>
+            <div class="tooltip">
+              <v-select @option-selected="changeLanguage" :options="languageOptions" disabled placeholder="Language" aria-label="language"></v-select><span class="tooltip-text">Not work only because YouTube API <a href="https://code.google.com/p/gdata-issues/issues/detail?id=4110&amp;q=relevanceLanguage&amp;colspec=API%20ID%20Type%20Status%20Priority%20Stars%20Summary" target="_blank" rel="noopener">issue</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <video-list :videos="results"></video-list>
+      <spinner :show="loading"></spinner>
+      <div class="no-results" v-show="noResults"> 
+        <router-link to="/"> <img :src="logo" :alt="appName + ' logo'"></router-link><span>No results.</span>
+      </div>
+    </div>
+  </section>
+</main>
 </template>
 
 <script>

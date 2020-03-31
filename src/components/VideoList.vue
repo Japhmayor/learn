@@ -1,18 +1,11 @@
-<template lang="pug">
-transition(
-  mode="out-in",
-  enter-active-class="fadeIn",
-  leave-active-class="fadeOut",
-  appear
-)
-  .container.video-list.animated(v-if="videos.length")
-    .columns(v-for="column in chunk(videos, columns)")
-      v-video.column(
-        v-for="(video, index) in column",
-        :video="video",
-        :key="index",
-        :class="[ columnSize ]"
-      )
+<template lang="">
+<transition mode="out-in" enter-active-class="fadeIn" leave-active-class="fadeOut" appear>
+  <div class="container video-list animated" v-if="videos.length">
+    <div class="columns" v-for="column in chunk(videos, columns)">
+      <v-video class="column" v-for="(video, index) in column" :video="video" :key="index" :class="[ columnSize ]"></v-video>
+    </div>
+  </div>
+</transition>
 </template>
 
 <script>

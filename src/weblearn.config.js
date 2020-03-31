@@ -8,23 +8,18 @@ export default {
         name: 'Meyo',
         url: '',
         title: title,
-        description: 'Meyo is an open source service which provides simple access to thousands of video lessons on web developing and programming.',
+        description: 'Meyo is a service which provides simple access to thousands of video lessons on web developing and programming.',
         author: 'Bontus',
         brand: {
             logo: 'static/images/logo.svg',
             logoMini: 'static/images/logo-mini.svg',
             banner: 'static/images/banner.png'
         },
-        github: {
-            username: 'japhmayor',
-            repo: 'japhmayor/learn'
-        },
         twitter: {
             username: 'bontusss',
             tweet: tweet
         },
         links: [
-            '<a class="github-button" href="https://github.com/japhmayor/learn" data-count-href="/freearhey/web-learn/stargazers" data-count-api="/repos/freearhey/web-learn#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star freearhey/web-learn on GitHub">Star</a>',
             '<a class="twitter-follow-button" href="https://twitter.com/bontusss">Follow @arhey</a>',
             '<a class="twitter-share-button" data-via="bontusss" href="https://twitter.com/intent/tweet?text=' + tweet + '">Tweet</a>'
         ]

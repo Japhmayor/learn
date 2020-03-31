@@ -1,18 +1,11 @@
-<template lang="pug">
-transition(
-  mode="out-in",
-  enter-active-class="fadeIn",
-  leave-active-class="fadeOut",
-  appear
-)
-  .container.topic-list.animated(v-if="topics.length")
-    .columns(v-for="column in chunk(topics, columns)")
-      v-topic.column(
-        v-for="(topic, index) in column",
-        :topic="topic",
-        :key="index",
-        :class="[ columnSize ]"
-      )
+<template lang="">
+<transition mode="out-in" enter-active-class="fadeIn" leave-active-class="fadeOut" appear>
+  <div class="container topic-list animated" v-if="topics.length">
+    <div class="columns" v-for="column in chunk(topics, columns)">
+      <v-topic class="column" v-for="(topic, index) in column" :topic="topic" :key="index" :class="[ columnSize ]"></v-topic>
+    </div>
+  </div>
+</transition>
 </template>
 
 <script>

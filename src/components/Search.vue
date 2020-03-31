@@ -1,11 +1,12 @@
-<template lang="pug">
-.Search
-  typeahead(
-    :items="suggestions",
-    placeholder="Search topics, channels, and videos"
-    @hit="search",
-    @type="fetchSuggestions"
-  )
+<template lang="">
+
+<div class="Search">
+  <typeahead :items="suggestions" 
+  placeholder="Search topics, channels, and videos" 
+  @hit="search" 
+  @type="fetchSuggestions">
+  </typeahead>
+</div> 
 </template>
 
 <script>

@@ -1,16 +1,17 @@
-<template lang="pug">
-nav.nav.has-shadow
-  .container
-    .nav-title
-      p Popular
-      p topics
-    .nav-item.is-scrollable
-      router-link.button.is-white(
-        v-for="topic in topics",
-        :key="topic.id",
-        :to="{ name: 'topic', params: { id: topic.id } }"
-      ) #[strong {{ topic.title }}]
-      router-link.link.more-link(:to="{ name: 'topics' }") #[strong Show all..]
+<template lang="">
+
+<nav class="nav has-shadow">
+  <div class="container">
+    <div class="nav-title">
+      <p>Popular</p>
+      <p>topics</p>
+    </div>
+    <div class="nav-item is-scrollable">
+      <router-link class="button is-white" v-for="topic in topics" :key="topic.id" :to="{ name: 'topic', params: { id: topic.id } }"><strong>{{ topic.title }}</strong></router-link>
+      <router-link class="link more-link" :to="{ name: 'topics' }"><strong>Show all..</strong></router-link>
+    </div>
+  </div>
+</nav>
 </template>
 
 <script>

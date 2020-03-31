@@ -1,21 +1,20 @@
-<template lang="pug">
-header.nav.header
-  .container
-    .nav-left
-      router-link(to="/").logo.nav-item.is-brand
-        img.is-hidden-mobile(:src="app.brand.logo",:alt="app.name + ' logo'")
-        img.is-hidden-tablet(:src="app.brand.logoMini",:alt="app.name + ' logo'")
-      search.nav-item
-    .nav-right.is-hidden-mobile
-      .nav-item.social-buttons
-        a.button(:href="'https://github.com/' + app.github.repo", target="_blank", rel="noopener noreferrer")
-          span.icon
-            ion-icon(name="logo-github")
-          span GitHub
-        a.button(:href="'https://twitter.com/intent/tweet?text=' + app.twitter.tweet + '&url=' + app.url + '&via=' + app.twitter.username", target="_blank", rel="noopener noreferrer")
-          span.icon
-            ion-icon(name="logo-twitter")
-          span Tweet
+<template lang="">
+
+<header class="nav header">
+  <div class="container">
+    <div class="nav-left">
+      <router-link class="logo nav-item is-brand" to="/"><img class="is-hidden-mobile" :src="app.brand.logo" :alt="app.name + ' logo'"><img class="is-hidden-tablet" :src="app.brand.logoMini" :alt="app.name + ' logo'"></router-link>
+      <search class="nav-item"></search>
+    </div>
+    <div class="nav-right is-hidden-mobile">
+      <div class="nav-item social-buttons">
+        <a class="button" :href="'https://twitter.com/intent/tweet?text=' + app.twitter.tweet + '&amp;url=' + app.url + '&amp;via=' + app.twitter.username" target="_blank" rel="noopener noreferrer"><span class="icon">
+            <ion-icon name="logo-twitter"></ion-icon></span>
+            <span>Tweet</span></a>
+      </div>
+    </div>
+  </div>
+</header>
 </template>
 
 <script>

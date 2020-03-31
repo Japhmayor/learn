@@ -1,8 +1,10 @@
-<template lang="pug">
-section.section
-  .container
-    h2.title.is-5 #[strong Recommended]
-    video-list(:videos="videos")
+<template lang="">
+<section class="section">
+  <div class="container">
+    <h2 class="title is-5"><strong>Recommended</strong></h2>
+    <video-list :videos="videos"></video-list>
+  </div>
+</section>
 </template>
 
 <script>

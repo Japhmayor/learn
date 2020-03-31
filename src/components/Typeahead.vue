@@ -1,28 +1,33 @@
-<template lang="pug">
-.Typeahead
-  .control.has-icon.is-fullwidth
-    input.input.is-medium.is-expanded(
-      type="text",
-      autocomplete="off",
-      :placeholder="placeholder",
-      v-model="query",
-      @keyup.enter="hit",
-      @keyup.esc="reset",
-      @keyup.down="down",
-      @keyup.up="up"
-      @keyup="update",
-      aria-label="search"
-    )
-    i.fa
-      ion-icon(name="search")
-  .Typeahead__list.panel(v-if="hasItems && show")
-    a.Typeahead__list-item(
-      v-for="(item, index) in items",
-      :key="index",
-      :class="{ 'Typeahead__list-item--current': isCurrent(index) }",
-      @mousemove="setCurrent(index)",
-      @click.prevent="hit"
-    ) {{ item }}
+<template lang="">
+
+<div class="Typeahead">
+  <div class="control has-icon is-fullwidth">
+    <input class="input is-medium is-expanded" 
+    type="text" autocomplete="off" 
+    :placeholder="placeholder" 
+    v-model="query" 
+    @keyup.enter="hit" 
+    @keyup.esc="reset" 
+    @keyup.down="down" 
+    @keyup.up="up" 
+    @keyup="update" 
+    aria-label="search">
+    <i class="fa">
+      <ion-icon name="search"></ion-icon></i>
+  </div>
+  <div 
+  class="Typeahead__list panel" 
+  v-if="hasItems &amp;&amp; show">
+  <a 
+    class="Typeahead__list-item" 
+    v-for="(item, index) in items" 
+    :key="index" 
+    :class="{ 'Typeahead__list-item--current': isCurrent(index) }" 
+    @mousemove="setCurrent(index)" 
+    @click.prevent="hit">{{ item }}
+  </a>
+  </div>
+</div>
 </template>
 
 <script>

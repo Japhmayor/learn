@@ -1,8 +1,10 @@
-<template lang="pug">
-main
-  component(is="recommended-videos")
-  hr
-  component(is="popular-videos")
+<template lang="">
+
+<main>
+  <component is="recommended-videos"></component>
+  <hr>
+  <component is="popular-videos"></component>
+</main>
 </template>
 
 <script>

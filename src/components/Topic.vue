@@ -1,20 +1,30 @@
-<template lang="pug">
-div
-  router-link.topic-link(:to="{ name: 'topic', params: { id: topic.id } }")
-    .card
-      .card-image
-        .hero.is-small(:style="{ backgroundColor: topic.color }")
-          .hero-body
-      .card__content.info
-        .container
-          .media
-            .media-left
-              .image.logo
-                span.logo__wrapper
-                img(:src="topic.logo",:alt="topic.title + ' Logo'")
-            .media-content
-              .content
-                .title.is-5 #[strong {{ topic.title }}]
+<template lang="">
+
+<div>
+  <router-link class="topic-link" :to="{ name: 'topic', params: { id: topic.id } }">
+    <div class="card">
+      <div class="card-image">
+        <div class="hero is-small" :style="{ backgroundColor: topic.color }">
+          <div class="hero-body"></div>
+        </div>
+      </div>
+      <div class="card__content info">
+        <div class="container">
+          <div class="media">
+            <div class="media-left">
+              <div class="image logo"><span class="logo__wrapper"></span><img :src="topic.logo" :alt="topic.title + ' Logo'"></div>
+            </div>
+            <div class="media-content">
+              <div class="content">
+                <div class="title is-5"><strong>{{ topic.title }}</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </router-link>
+</div>
 </template>
 
 <script>
