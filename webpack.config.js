@@ -1,42 +1,60 @@
 require('dotenv').config()
-const webpack = require('webpack')
-const path = require('path')
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { join } = require('path');
+const webpack = require('webpack');
+const {HotModuleReplacementPlugin} = require('webpack');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = env => {
   let config = {
     mode: 'development',
-    entry: './src/main.js',
+    entry: join(__dirname, 'src/main.js'),
     output: {
-      path: path.resolve(__dirname, 'build'),
-      publicPath: '/build/',
+      path: join(__dirname, 'build'),
       filename: 'bundle.js'
     },
     devtool: 'inline-source-map',
     devServer: {
-      historyApiFallback: true
+      historyApiFallback: true,
+      hot: true,
+      open: true,
     },
     plugins: [
+      new HotModuleReplacementPlugin(),
       new VueLoaderPlugin(),
       new webpack.DefinePlugin({
         'process.env.YOUTUBE_API_KEY': `"${process.env.YOUTUBE_API_KEY}"`
-      })
+      }),
+      new HTMLWebpackPlugin({
+        'showErrors': true,
+        'cache': true,
+        'title': 'Meyo',
+        'favicon': join(__dirname, 'public/static/favicons/favicon.ico'),
+        'template': join(__dirname, 'public/index.html'),
+      }),
+      new CopyWebpackPlugin([
+        {
+          from: join(__dirname, 'public/static'),
+          to: 'static'
+        },
+      ])
     ],
     resolve: {
       alias: {
-        '~': path.resolve(__dirname, 'src/'),
-        '~api': path.resolve(__dirname, 'src/api/'),
-        '~assets': path.resolve(__dirname, 'src/assets/'),
-        '~components': path.resolve(__dirname, 'src/components/'),
-        '~config': path.resolve(__dirname, 'src/weblearn.config.js'),
-        '~events': path.resolve(__dirname, 'src/events/'),
-        '~pages': path.resolve(__dirname, 'src/pages/'),
-        '~store': path.resolve(__dirname, 'src/store/'),
-        '~topics': path.resolve(__dirname, 'src/topics/'),
-        '~transformers': path.resolve(__dirname, 'src/transformers/'),
-        '~util': path.resolve(__dirname, 'src/util/'),
-        '~widgets': path.resolve(__dirname, 'src/widgets/')
+        '~': join(__dirname, 'src/'),
+        '~api': join(__dirname, 'src/api/'),
+        '~assets': join(__dirname, 'src/assets/'),
+        '~components': join(__dirname, 'src/components/'),
+        '~config': join(__dirname, 'src/weblearn.config.js'),
+        '~events': join(__dirname, 'src/events/'),
+        '~pages': join(__dirname, 'src/pages/'),
+        '~store': join(__dirname, 'src/store/'),
+        '~topics': join(__dirname, 'src/topics/'),
+        '~transformers': join(__dirname, 'src/transformers/'),
+        '~util': join(__dirname, 'src/util/'),
+        '~widgets': join(__dirname, 'src/widgets/')
       }
     },
     module: {
@@ -54,7 +72,10 @@ module.exports = env => {
         {
           test: /\.js$/,
           loader: 'babel-loader',
-          exclude: /node_modules/
+          exclude: /node_modules/,
+	  options: {
+	      presets: ['@babel/preset-env']
+	  }
         },
         {
           test: /\.json$/,
@@ -92,6 +113,7 @@ module.exports = env => {
       new BundleAnalyzerPlugin()
     ])
   }
+
 
   return config
 }
