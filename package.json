@@ -47,7 +47,7 @@
     "lodash.orderby": "latest",
     "lodash.truncate": "^4.4.2",
     "nl2br": "^0.0.3",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "numeral": "^2.0.6",
     "prettier": "2.0.2",
     "pug": "^2.0.4",
